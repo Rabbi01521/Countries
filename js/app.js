@@ -31,19 +31,21 @@ const displayCountries = countries => {
 
 
 const loadCountryDetail = name => {
+    document.getElementById('spinner').classList.remove('d-none');
     const url = `https://restcountries.eu/rest/v2/name/${name}`
     fetch(url)
-    .then(res => res.json())
-    .then(data =>  displayCountryDetail(data[0]))
+        .then(res => res.json())
+        .then(data => displayCountryDetail(data[0]))
 }
 
 const displayCountryDetail = country => {
     console.log(country);
+    document.getElementById('spinner').classList.add('d-none');
     const countryDiv = document.getElementById('exampleModalLabel');
     const modalBody = document.getElementById('modal-body');
     countryDiv.innerText = `${country.name}`;
     modalBody.innerHTML = `
-        <img class = "p-5 img-fluid" src="${country.flag}">
+        <img class = "my-3 img-fluid border border-2" src="${country.flag}">
         <p> Population: ${country.population}</p>
         <p> Capital: ${country.capital}</p>
         <p> Calling-Codes: ${country.callingCodes}</p>
