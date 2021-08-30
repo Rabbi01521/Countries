@@ -57,10 +57,5 @@ const displayCountryDetail = country => {
         <p> currencies-Name: ${country.currencies[0].name}</p>
         <p> currencies-Symbol: ${country.currencies[0].symbol}</p>
         <p> Regional Blocs: ${country.regionalBlocs[0]?.acronym}(${country.regionalBlocs[0]?.name})</p>
-    `
-    // countryDiv.innerHTML = `
-    //     <h4>${country.name}</h4>
-    //     <img width="100px" src="${country.flag}">
-    //     <p> Population: ${country.population}</p>
-    // `;
+    `;
 }
