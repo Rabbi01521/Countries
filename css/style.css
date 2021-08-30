@@ -1,0 +1,41 @@
+/* font  */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+
+body {
+  font-family: "Fira Code", monospace;
+}
+
+#countries {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#details {
+  background-color: rgb(212, 243, 192);
+  border: 2px solid thistle;
+  margin: 15px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.country {
+  background-color: rgba(204, 255, 213, 0.678);
+  margin: 15px;
+  padding: 20px;
+  border: 2px solid tomato;
+  border-radius: 10px;
+}
+
+button {
+  background-color: turquoise;
+  padding: 10px 20px;
+  color: aliceblue;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+button:focus {
+  background-color: rgb(136, 127, 255);
+}
